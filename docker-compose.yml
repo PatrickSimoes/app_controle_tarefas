@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:latest
+    restart: unless-stopped
+    container_name: ct_laravel
+    environment:
+      MYSQL_ROOT_PASSWORD: kyouma
+      MYSQL_DATABASE: ct
+      MYSQL_USER: mad_cientist
+      MYSQL_PASSWORD: kyouma
+    volumes:
+      - mysql_data_ct:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data_ct:
+    name: mysql_data_ct_laravel
