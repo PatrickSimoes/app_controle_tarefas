@@ -5,7 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tarefa</div>
+                <div 
+                  class="card-header">
+                  Tarefa
+                  <a href="{{ route('tarefa.create') }}" class="float-right">Nova tarefa</a>
+                </div>
 
                 <div class="card-body">
                   <table class="table">
@@ -56,7 +60,6 @@
                     </ul>
                   </nav>
                 </div>
-                <a class="card-header" href="{{ route('tarefa.create') }}">Nova tarefa</a>
             </div>
         </div>
     </div>
