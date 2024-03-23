@@ -29,6 +29,8 @@ Route::resource('tarefa', TarefaController::class)->middleware('verified');
 
 Route::get('tarefa-exportacao/{extensao}', [TarefaController::class, 'exportacao'])->name('tarefa.exportacao');
 
+Route::get('tarefa-exportar', [TarefaController::class, 'exportar'])->name('tarefa.exportar');
+
 Route::get('/mensagem-teste', function() {
     return new MensagemTesteMail();
     /* Mail::to('patricksimoes25@gmail.com')->send(new MensagemTesteMail());
